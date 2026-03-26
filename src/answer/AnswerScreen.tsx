@@ -33,6 +33,12 @@ export const AnswerScreen = ({ question, answer, GaugeChartComponent, onBack, se
   const commission = Math.round(stake * 0.02);
   const winAmount = Math.round(stake * selectedCoeff);
 
+  const submit = () => {
+    window.location.replace(
+      'alfabank://sdui_screen?screenName=InvestmentLongread&fromCurrent=true&shouldUseBottomSafeArea=true&endpoint=v1/invest-main-screen-view/investment-longread/98955%3flocation=AM%26campaignCode=GH',
+    );
+  };
+
   return (
     <div className={appSt.page}>
       <div className={appSt.hero}>
@@ -236,7 +242,7 @@ export const AnswerScreen = ({ question, answer, GaugeChartComponent, onBack, se
             </Typography.Text>
           }
         >
-          <Typography.Text tag="span" view="primary-medium" color="primary-inverted" weight="medium">
+          <Typography.Text tag="span" view="primary-medium" color="primary-inverted" weight="medium" onClick={submit}>
             Поставить
           </Typography.Text>
         </Button>
