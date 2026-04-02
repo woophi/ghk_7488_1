@@ -246,8 +246,9 @@ export const AnswerScreen = ({ question, answer, GaugeChartComponent, onBack, se
               {stake.toLocaleString('ru-RU')} ₽ кешбэка
             </Typography.Text>
           }
+          onClick={submit}
         >
-          <Typography.Text tag="span" view="primary-medium" color="primary-inverted" weight="medium" onClick={submit}>
+          <Typography.Text tag="span" view="primary-medium" color="primary-inverted" weight="medium">
             Поставить
           </Typography.Text>
         </Button>
